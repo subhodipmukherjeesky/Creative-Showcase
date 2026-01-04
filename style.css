@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #f5f6f8;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --border: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header */
+header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn, header a {
+  border: 1px solid var(--border);
+  background: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.nav-btn:hover, header a:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Hero */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* Layout */
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px;
+}
+
+/* Masonry */
+.masonry {
+  column-count: 4;
+  column-gap: 20px;
+}
+
+@media (max-width: 1100px) { .masonry { column-count: 3; } }
+@media (max-width: 768px) { .masonry { column-count: 2; } }
+@media (max-width: 480px) { .masonry { column-count: 1; } }
+
+/* Image Card */
+.image-card {
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.image-card img {
+  width: 100%;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.image-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay a,
+.overlay span {
+  color: white;
+  font-size: 14px;
+}
+
+/* Forms */
+form {
+  max-width: 420px;
+  background: var(--card);
+  padding: 32px;
+  border-radius: 14px;
+  margin: 80px auto;
+  border: 1px solid var(--border);
+}
+
+form h2 {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
+}

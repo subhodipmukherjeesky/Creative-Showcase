@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>Dashboard</h2>
+  <div class="nav-buttons">
+    <button class="nav-btn" onclick="goBack()">Back</button>
+    <button class="nav-btn" onclick="goHome()">Home</button>
+    <button class="nav-btn" onclick="logout()">Logout</button>
+  </div>
+</header>
+
+<div class="container">
+  <input type="file" accept="image/*" onchange="uploadImage(event)">
+  <h3>Your Uploads</h3>
+  <div class="masonry" id="myGallery"></div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  loadMyImages();
+</script>
+</body>
+</html>

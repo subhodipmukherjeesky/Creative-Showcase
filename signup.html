@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>Sign Up</h2>
+  <div class="nav-buttons">
+    <button class="nav-btn" onclick="goBack()">Back</button>
+    <button class="nav-btn" onclick="goHome()">Home</button>
+  </div>
+</header>
+
+<form onsubmit="signup(event)">
+  <h2>Create Account</h2>
+  <input id="username" placeholder="Username" required>
+  <input id="password" type="password" placeholder="Password" required>
+  <button>Create Account</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
